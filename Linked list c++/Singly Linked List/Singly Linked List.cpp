@@ -35,10 +35,10 @@ void Display(Node *head){
 
 void insertFront(Node *&head, int x){
     Node *tmp = makeNode(x);
-    if (head == NULL){
+    if (head == NULL) {
         head = tmp;
     }
-    else{
+    else {
         tmp->next = head;
         head = tmp;
     }
@@ -46,7 +46,7 @@ void insertFront(Node *&head, int x){
 
 void insertBack(Node *&head, int x) {
     Node *tmp = makeNode(x);
-    if (head == NULL){
+    if (head == NULL) {
         head = tmp;
     }
     else{
@@ -69,7 +69,7 @@ void insertMiddle(Node *&head, int x, int pos){
         }
         else {
             Node *p = head;
-            for (int i = 1; i <= pos - 2; i ++){
+            for (int i = 1; i <= pos - 2; i ++){ 
                 p = p->next;
             }
             Node *tmp = makeNode(x);
@@ -85,7 +85,7 @@ void deleteFront(Node *&head){
     head = head->next;
     delete temp;
 }
-void deleteBack(Node *&head){
+void deleteBack(Node *&head) {
     if (head == NULL) return;
     Node *temp = head;
     if (temp->next == NULL) {
