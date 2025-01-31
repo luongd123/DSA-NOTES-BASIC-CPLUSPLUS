@@ -42,12 +42,3 @@ int main(){
     BFS(u);
     return 0;
 }
-
-/*
-SAMPLE INPUT:
-25 77
-12 22 1 5 8 27 12 14 11 19 11 16 5 4 7 10 77 56 44 33 12 88 76 72 100
-SAMPLE OUTPUT:
-1
-
-*/
