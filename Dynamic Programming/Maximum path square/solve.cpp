@@ -19,10 +19,8 @@ void solve(){
         for(int j = 1; j <= m; j ++){
             if(a[i][j] == 1){
                 f[i][j] = min({f[i- 1][j], f[i][j - 1], f[i -1 ][j - 1]}) + 1;
-            
-
-        }
-        res = max(res, f[i][j]);
+            }
+            res = max(res, f[i][j]);
         }
     }
     // for(int i = 1; i <= n; i++){
@@ -45,11 +43,6 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr); 
     solve();
-    
-    
-
-    
-    
     
     return 0;
 }

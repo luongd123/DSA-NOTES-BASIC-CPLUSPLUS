@@ -16,13 +16,13 @@ void Try(int i){
     }
 }
 int main(){
-    #ifndef ONLINE_JUDGE                
-    freopen("input.txt", "r", stdin);
-    freopen("output1.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE                
+    // freopen("input.txt", "r", stdin);
+    // freopen("output1.txt", "w", stdout);
+    // #endif
     cin >> n;
     Try(1);
-    cout << res;
+    cout << res << endl;
 
 
     return 0;
