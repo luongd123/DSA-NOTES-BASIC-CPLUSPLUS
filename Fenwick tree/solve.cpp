@@ -9,7 +9,7 @@ int n, q, a[200000], BIT[200000];
 // Xay cay
 void update(int pos, int val) {
     for (; pos <= n; pos += pos & (-pos)) {
-        cout << pos <<" ";
+        // cout << pos <<" ";
         BIT[pos] += val;
     }
 }
@@ -38,6 +38,7 @@ int main() {
     while (q --) {
         int c, x, y; cin >> c >> x >> y;
         if (c == 1) {
+            a[x] = y;
             update(x, y);
         }
         else if (c == 2) {

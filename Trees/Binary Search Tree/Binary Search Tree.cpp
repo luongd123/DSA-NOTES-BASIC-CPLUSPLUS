@@ -13,17 +13,6 @@ struct node{
     }
 };
 
-void makeRoot(node *root, int u, int v, char c){
-    if(c == 'L'){
-        root->left = new node(v);
-    }
-    else{
-        root->right = new node(v);
-    }
-}
-
-
-
 
 //////////////////////////////////BROWSE///////////////////////////////////////
 
@@ -100,8 +89,6 @@ bool search(node *root, int key){// tim kiem
 
 node *makeNode(int x){
     node *newNode = new node(x);
-    newNode->left = NULL;
-    newNode->right = NULL;
     return newNode;
 }
 
@@ -115,7 +102,7 @@ node *minNode(node *root){
 
 node *insertBinary(node *root, int key){
     if(root == NULL){
-        return makeNode(key);
+        return new node(key);
     }
     if(key < root->val){
         root->left = insertBinary(root->left, key);
